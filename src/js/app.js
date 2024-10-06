@@ -1,36 +1,9 @@
-const character = {
-  name: 'Лучник',
-  type: 'Bowman',
-  health: 50,
-  level: 3,
-  attack: 40,
-  defence: 10,
-  special: [
-    {
-      id: 8,
-      name: 'Двойной выстрел',
-      icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон',
-    },
-    {
-      id: 9,
-      name: 'Нокаутирующий удар',
-      icon: 'http://...',
-      // <- обратите внимание, описание "засекречено"
-    },
-  ],
-};
+/* eslint-disable no-unused-vars */
 
-function showSpecial({ special: [el1, el2] }) {
-  const startArr = [el1, el2];
-
-  startArr.forEach((e) => {
-    if (e.description === undefined) {
-      e.description = 'Описание недоступно';
-    }
-  });
-
-  return startArr;
-}
-
-console.log(showSpecial(character));
+import Bowman from "./classes/Bowman";
+import Character from "./classes/Character";
+import Deamon from "./classes/Daemon";
+import Magician from "./classes/Magician";
+import Swordsman from "./classes/Swordsman";
+import Undead from "./classes/Undead";
+import Zombie from "./classes/Zombie";
